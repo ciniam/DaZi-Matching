@@ -1,0 +1,41 @@
+# ====== Node.js / Frontend ======
+node_modules/
+dist/
+.next/
+.nuxt/
+
+# ====== Java / Maven ======
+target/
+*.class
+*.jar
+*.war
+*.log
+!.mvn/wrapper/maven-wrapper.jar
+
+# ====== IDE ======
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# ====== OS ======
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ====== Env / Secrets ======
+.env
+.env.local
+.env.*.local
+*.secret
+# 排除真实配置文件（上传 .example 模板即可）
+application.yml
+application-dev.yml
+application-prod.yml
+
+# ====== Misc ======
+*.tmp
+*.swp
+*.swo
+*~

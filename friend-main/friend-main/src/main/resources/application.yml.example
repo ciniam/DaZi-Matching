@@ -1,0 +1,49 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: friend-match-backend
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/partnermatching?serverTimezone=UTC
+    username: your_db_username
+    password: your_db_password
+  # session 失效时间（分钟）
+  session:
+    timeout: 86400
+    store-type: redis
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  redis:
+    port: 6379
+    host: localhost
+    database: 1
+    # password: your_redis_password
+  mail:
+    host: smtp.qq.com
+    # 你的QQ邮箱，这里为发件人
+    username: your_email@qq.com
+    # 你的QQ邮箱授权码
+    password: your_email_auth_code
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+# 七牛云OSS配置
+qiniu:
+  access-key: your_qiniu_access_key
+  secret-key: your_qiniu_secret_key
+  bucket: your_bucket_name
+  base-url: your_cdn_base_url
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
