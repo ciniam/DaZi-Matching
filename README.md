@@ -145,6 +145,3 @@ npm run dev
 - GitHub: [@ciniam](https://github.com/ciniam)
 - 作者: xiejun
 
----
-
-> 本项目为全栈开发练习项目，适合作为面试作品展示。如有任何问题欢迎提 Issue！
